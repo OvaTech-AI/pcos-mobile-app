@@ -11,6 +11,7 @@ import { SafeAreaView, StatusBar, useColorScheme, StyleSheet } from 'react-nativ
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import DoctorHomeScreen from './src/screens/DoctorPortal/DoctorHomeScreen';
+import PatientDashboardScreen from './src/screens/DoctorPortal/PatientDashboardScreen';
 
 const Stack = createStackNavigator();
 
@@ -26,9 +27,14 @@ function App(): React.JSX.Element {
       <SafeAreaView style={[styles.safeArea, backgroundStyle]}>
         <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
         <Stack.Navigator initialRouteName="DoctorHome">
-          <Stack.Screen
+          {/* <Stack.Screen
             name="DoctorHome"
             component={DoctorHomeScreen}
+            options={{ headerShown: false }}
+          /> */}
+          <Stack.Screen
+            name="PatientDashboard"
+            component={PatientDashboardScreen}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>
