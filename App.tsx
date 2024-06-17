@@ -14,6 +14,7 @@ import DoctorHomeScreen from './src/screens/DoctorPortal/DoctorHomeScreen';
 import PatientDashboardScreen from './src/screens/DoctorPortal/PatientDashboardScreen';
 import UltrasoundUploadPopupScreen from './src/screens/DoctorPortal/UltrasoundUploadPopupScreen';
 import UltrasoundUploadedScreen from './src/screens/DoctorPortal/UltrasoundUploadedScreen';
+import LoadingPage from './src/screens/DoctorPortal/LoadingScreen';
 
 const Stack = createStackNavigator();
 
@@ -44,9 +45,14 @@ function App(): React.JSX.Element {
             component={UltrasoundUploadPopupScreen}
             options={{ headerShown: false }}
           /> */}
-          <Stack.Screen
+          {/* <Stack.Screen
             name="UltrasoundUploaded"
             component={UltrasoundUploadedScreen}
+            options={{ headerShown: false }}
+          /> */}
+          <Stack.Screen
+            name="Loading"
+            component={LoadingPage}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>
