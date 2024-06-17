@@ -12,6 +12,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import DoctorHomeScreen from './src/screens/DoctorPortal/DoctorHomeScreen';
 import PatientDashboardScreen from './src/screens/DoctorPortal/PatientDashboardScreen';
+import UltrasoundUploadPopupScreen from './src/screens/DoctorPortal/UltrasoundUploadPopupScreen';
+import UltrasoundUploadedScreen from './src/screens/DoctorPortal/UltrasoundUploadedScreen';
 
 const Stack = createStackNavigator();
 
@@ -32,9 +34,19 @@ function App(): React.JSX.Element {
             component={DoctorHomeScreen}
             options={{ headerShown: false }}
           /> */}
-          <Stack.Screen
+          {/* <Stack.Screen
             name="PatientDashboard"
             component={PatientDashboardScreen}
+            options={{ headerShown: false }}
+          /> */}
+          {/* <Stack.Screen
+            name="UltrasoundUploadPopup"
+            component={UltrasoundUploadPopupScreen}
+            options={{ headerShown: false }}
+          /> */}
+          <Stack.Screen
+            name="UltrasoundUploaded"
+            component={UltrasoundUploadedScreen}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>
