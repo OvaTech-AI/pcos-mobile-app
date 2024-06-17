@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Button from '../../components/DoctorPortal/Button';
+import HomeIcon from '../../components/DoctorPortal/HomeIcon';
+import PersonIcon from '../../components/DoctorPortal/PersonIcon';
 
 const PatientDashboardScreen = () => {
   return (
@@ -50,6 +52,10 @@ const PatientDashboardScreen = () => {
           buttonStyle={styles.exploreButton}
           textStyle={styles.exploreButtonText}
         />
+      </View>
+      <View style={styles.bottomNav}>
+        <HomeIcon />
+        <PersonIcon />
       </View>
     </View>
   );
@@ -145,6 +151,18 @@ const styles = StyleSheet.create({
   },
   exploreButtonText: {
     color: '#f47b7b',
+  },
+  bottomNav: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+    height: 60,
+    backgroundColor: '#fff',
+    borderTopWidth: 1,
+    borderTopColor: '#ccc',
   },
 });
 
